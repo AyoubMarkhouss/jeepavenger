@@ -35,11 +35,11 @@ export function Imagehero() {
           voluptates qui quidem eos error. Ratione culpa blanditiis aperiam
           eligendi necessitatibus quasi exercitationem.
         </motion.p>
-        <button className="px-4 py-4 backdrop-blur-sm border bg-yellow-500/10 border-yellow-500/20 text-white mx-auto text-center rounded-full relative mt-4">
+        <div className="px-4 py-4 backdrop-blur-sm border bg-yellow-500/10 border-yellow-500/20 text-white mx-auto text-center rounded-full relative mt-4">
           <span>
             <FaArrowDownLong />
           </span>
-        </button>
+        </div>
       </motion.div>
     </ImagesSlider>
   );
