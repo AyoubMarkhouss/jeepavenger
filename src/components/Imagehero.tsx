@@ -5,7 +5,12 @@ import { ImagesSlider } from "./ui/images-slider";
 import { FaArrowDownLong } from "react-icons/fa6";
 
 export function Imagehero() {
-  const images = ["/avenger1.jpg", "/avenger1.jpg"];
+  const images = [
+    "/avenger1.jpg",
+    "/avenger2.jpeg",
+    "/avenger3.jpg",
+    "/avenger4.jpg",
+  ];
   return (
     <ImagesSlider className="h-[40rem]" images={images}>
       <motion.div
