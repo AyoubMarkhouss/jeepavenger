@@ -50,10 +50,7 @@ const Form = () => {
     <>
       <div className=" bg-black">
         <section className="p-6 text-slate-50">
-          <form
-            onSubmit={(e) => onSubmit(e)}
-            className="form container w-full  p-8  "
-          >
+          <form onSubmit={(e) => onSubmit(e)} className="form w-full  p-8  ">
             <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center bg-black">
               <div className="flex justify-center">
                 <div className="p-5 max-w-lg   hover:bg-slate-50/5 hover:rounded-xl  flex flex-col items-center">
@@ -195,65 +192,67 @@ const Form = () => {
               </div>
             </div>
 
-            <div className="">
-              <label className="block text-lg mb-1 ml-1">Nom :</label>
-              <input
-                name="Nom"
-                id="Nom"
-                type="text"
-                placeholder=""
-                className="block w-full  p-1 py-2 mb-3 text-black rounded focus:outline-none focus:ring focus:ring-opacity-25 focus:ring-amber-400 dark:bg-gray-100"
-              />
-            </div>
-            <div>
-              <label className="block text-lg mb-1 ml-1">Prénom :</label>
-              <input
-                name="Prenom"
-                id="Prenom"
-                type="text"
-                placeholder=""
-                className="block w-full p-1 py-2 mb-3 text-black rounded focus:outline-none focus:ring focus:ring-opacity-25 focus:ring-amber-400 dark:bg-gray-100"
-              />
-            </div>
-            <div>
-              <label className="block text-lg mb-1 ml-1">Téléphone :</label>
-              <input
-                name="Telephone"
-                id="Telephone"
-                type="tel"
-                placeholder=""
-                className="block w-full p-1 py-2 mb-3 text-black rounded focus:outline-none focus:ring focus:ring-opacity-25 focus:ring-amber-400 dark:bg-gray-100"
-              />
-            </div>
-            <div>
-              <label className="block text-lg mb-1 ml-1">E-mail :</label>
-              <input
-                name="Email"
-                id="Email"
-                type="email"
-                placeholder=""
-                className="block w-full p-1 py-2 mb-3 text-black rounded focus:outline-none focus:ring focus:ring-opacity-25 focus:ring-amber-400 dark:bg-gray-100"
-              />
-            </div>
-            <div>
-              <label className="block text-lg mb-1 ml-1">Ville :</label>
-              <input
-                name="Ville"
-                id="Ville"
-                type="text"
-                placeholder=""
-                className="block w-full p-1 py-2 mb-10 text-black rounded focus:outline-none focus:ring focus:ring-opacity-25 focus:ring-amber-400 dark:bg-gray-100"
-              />
-            </div>
+            <div className="lg:px-80">
+              <div className="">
+                <label className="block text-lg mb-1 ml-1">Nom :</label>
+                <input
+                  name="Nom"
+                  id="Nom"
+                  type="text"
+                  placeholder=""
+                  className="block w-full  p-1 py-2 mb-3 text-slate-50 rounded focus:outline-none  focus:ring-1 backdrop-blur-sm  bg-gray-400/10 border border-slate-100/20"
+                />
+              </div>
+              <div>
+                <label className="block text-lg mb-1 ml-1">Prénom :</label>
+                <input
+                  name="Prenom"
+                  id="Prenom"
+                  type="text"
+                  placeholder=""
+                  className="block w-full  p-1 py-2 mb-3 text-slate-50 rounded focus:outline-none  focus:ring-1 backdrop-blur-sm  bg-gray-400/10 border border-slate-100/20"
+                />
+              </div>
+              <div>
+                <label className="block text-lg mb-1 ml-1">Téléphone :</label>
+                <input
+                  name="Telephone"
+                  id="Telephone"
+                  type="tel"
+                  placeholder=""
+                  className="block w-full  p-1 py-2 mb-3 text-slate-50 rounded focus:outline-none  focus:ring-1 backdrop-blur-sm  bg-gray-400/10 border border-slate-100/20"
+                />
+              </div>
+              <div>
+                <label className="block text-lg mb-1 ml-1">E-mail :</label>
+                <input
+                  name="Email"
+                  id="Email"
+                  type="email"
+                  placeholder=""
+                  className="block w-full  p-1 py-2 mb-3 text-slate-50 rounded focus:outline-none  focus:ring-1 backdrop-blur-sm  bg-gray-400/10 border border-slate-100/20"
+                />
+              </div>
+              <div>
+                <label className="block text-lg mb-1 ml-1">Ville :</label>
+                <input
+                  name="Ville"
+                  id="Ville"
+                  type="text"
+                  placeholder=""
+                  className="block w-full  p-1 py-2 mb-3 text-slate-50 rounded focus:outline-none  focus:ring-1 backdrop-blur-sm  bg-gray-400/10 border border-slate-100/20"
+                />
+              </div>
 
-            <div>
-              <button
-                name="Name"
-                type="submit"
-                className="w-full px-4 py-4 mt-4 hover:text-black font-bold rounded shadow focus:outline-none  bg-amber-400 hover:bg-amber-300 text-gray-50"
-              >
-                Envoyer
-              </button>
+              <div>
+                <button
+                  name="Name"
+                  type="submit"
+                  className="w-full px-4 py-4 mt-10 hover:text-black font-bold rounded shadow focus:outline-none  backdrop-blur-sm  bg-yellow-500/80 border border-slate-100/20 hover:bg-amber-500/60 text-gray-50 "
+                >
+                  Envoyer
+                </button>
+              </div>
             </div>
           </form>
         </section>
