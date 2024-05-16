@@ -195,14 +195,14 @@ const Form = () => {
               </div>
             </div>
 
-            <div>
+            <div className="">
               <label className="block text-lg mb-1 ml-1">Nom :</label>
               <input
                 name="Nom"
                 id="Nom"
                 type="text"
                 placeholder=""
-                className="block w-full p-1 py-2 mb-3 text-black rounded focus:outline-none focus:ring focus:ring-opacity-25 focus:ring-amber-400 dark:bg-gray-100"
+                className="block w-full  p-1 py-2 mb-3 text-black rounded focus:outline-none focus:ring focus:ring-opacity-25 focus:ring-amber-400 dark:bg-gray-100"
               />
             </div>
             <div>

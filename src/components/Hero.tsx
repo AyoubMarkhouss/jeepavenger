@@ -1,10 +1,11 @@
 import React from "react";
+import { Imagehero } from "./Imagehero";
 
 const Hero = () => {
   return (
-    <div>
-      <h1>Hero section</h1>
-    </div>
+    <>
+      <Imagehero />
+    </>
   );
 };
 
