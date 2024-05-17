@@ -6,10 +6,11 @@ import { FaArrowDownLong } from "react-icons/fa6";
 
 export function Imagehero() {
   const images = [
-    "/avenger1.jpg",
-    "/avenger2.jpeg",
-    "/avenger3.jpg",
-    "/avenger4.jpg",
+    "/desert.jpg",
+    "/mer.jpg",
+    "/foret.jpg",
+    "/montagnes.jpg",
+    "/urbain.jpg",
   ];
   return (
     <ImagesSlider className="h-[40rem]" images={images}>
@@ -27,8 +28,8 @@ export function Imagehero() {
         }}
         className="z-50 flex flex-col justify-center items-center"
       >
-        <motion.p className="font-bold text-4xl md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
-          The hero section slideshow <br /> nobody asked for
+        <motion.p className="font-bold text-4xl md:text-8xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
+          FREEDOM OF CHOICE
         </motion.p>
         <motion.p className="font-bold px-5 md:max-w-xl text-lg text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum
