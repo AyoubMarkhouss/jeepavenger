@@ -31,7 +31,7 @@ export function Imagehero() {
         <motion.p className="font-bold text-4xl md:text-8xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
           FREEDOM OF CHOICE
         </motion.p>
-        <motion.p className="font-bold px-5 md:max-w-xl text-lg text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
+        <motion.p className="font-bold px-5 md:max-w-3xl text-lg text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum
           voluptates qui quidem eos error. Ratione culpa blanditiis aperiam
           eligendi necessitatibus quasi exercitationem.
