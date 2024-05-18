@@ -43,10 +43,9 @@ export default function AnimatedTimer() {
   return (
     <div className="p-4 bg-black">
       <div className="flex flex-col justify-center items-center pb-12">
-        <h1 className="font-bold text-4xl md:text-5xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
-          Lorem ipsuuuuuum !
+        <h1 className="font-bold pb-4 text-4xl md:text-5xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+          Are you ready to make a choice ?
         </h1>
-        
       </div>
       <div className="w-full max-w-5xl mx-auto flex items-center ">
         <CountdownItem num={timerDays} text="Jours" />

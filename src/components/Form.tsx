@@ -13,6 +13,7 @@ const Form = () => {
 
     try {
       const formData = new FormData(event.currentTarget);
+      console.log(event.currentTarget);
       const response = await fetch(
         "https://script.google.com/macros/s/AKfycbz0puOgxIILLpsGqR-91q3kfJL_Usq97XQ0fK_4kjnmFyd807FgPZJFV-AB-0Bu2u0c/exec",
         {
@@ -28,9 +29,9 @@ const Form = () => {
       console.error(error);
     } finally {
       toast.success("Envoyé avec succès !");
-      setTimeout(() => {
-        router.refresh();
-      }, 3000);
+      // setTimeout(() => {
+      //   router.refresh();
+      // }, 3000);
     }
   }
 
@@ -60,19 +61,22 @@ const Form = () => {
                   >
                     <Image
                       alt="a"
-                      src="/image.jpg"
+                      src="/desert.jpg"
                       width={1000}
                       height={1000}
                       className="shadow rounded-lg overflow-hidden border"
                     />
 
-                    <div className="mt-5 flex justify-center">
+                    <div className="mt-5 flex flex-col items-center justify-center">
+                      <h2 className="text-3xl pb-3 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+                        Desert
+                      </h2>
                       <input
                         className="relative float-left  h-6 w-6 appearance-none rounded-full border-2 border-solid border-secondary-500 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-slate-50 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-black/60 focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-checkbox checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] rtl:float-right dark:border-neutral-400 dark:checked:border-primary"
                         type="radio"
                         name="Endroit"
                         id={`Endroitoption1`}
-                        value="desert"
+                        value="Desert"
                       />
                     </div>
                   </div>
@@ -87,19 +91,22 @@ const Form = () => {
                   >
                     <Image
                       alt="a"
-                      src="/image.jpg"
+                      src="/mer.jpg"
                       width={1000}
                       height={1000}
                       className="shadow rounded-lg overflow-hidden border"
                     />
 
-                    <div className="mt-5 flex justify-center">
+                    <div className="mt-5 flex flex-col items-center justify-center">
+                      <h2 className="text-3xl pb-3 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+                        Mer
+                      </h2>
                       <input
                         className="relative float-left  h-6 w-6 appearance-none rounded-full border-2 border-solid border-secondary-500 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-slate-50 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-black/60 focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-checkbox checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] rtl:float-right dark:border-neutral-400 dark:checked:border-primary"
                         type="radio"
                         name="Endroit"
                         id={`Endroitoption2`}
-                        value="beach"
+                        value="Mer"
                       />
                     </div>
                   </div>
@@ -116,13 +123,16 @@ const Form = () => {
                   >
                     <Image
                       alt="a"
-                      src="/image.jpg"
+                      src="/foret.jpg"
                       width={1000}
                       height={1000}
                       className="shadow rounded-lg overflow-hidden border"
                     />
 
-                    <div className="mt-5 flex justify-center">
+                    <div className="mt-5 flex flex-col items-center justify-center">
+                      <h2 className="text-3xl pb-3 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+                        Forêt
+                      </h2>
                       <input
                         className="relative float-left  h-6 w-6 appearance-none rounded-full border-2 border-solid border-secondary-500 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-slate-50 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-black/60 focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-checkbox checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] rtl:float-right dark:border-neutral-400 dark:checked:border-primary"
                         type="radio"
@@ -143,13 +153,16 @@ const Form = () => {
                   >
                     <Image
                       alt="a"
-                      src="/image.jpg"
+                      src="/montagnes.jpg"
                       width={1000}
                       height={1000}
                       className="shadow rounded-lg overflow-hidden border"
                     />
 
-                    <div className="mt-5 flex justify-center">
+                    <div className="mt-5 flex flex-col items-center justify-center">
+                      <h2 className="text-3xl pb-3 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+                        Montagnes
+                      </h2>
                       <input
                         className="relative float-left  h-6 w-6 appearance-none rounded-full border-2 border-solid border-secondary-500 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-slate-50 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-black/60 focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-checkbox checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] rtl:float-right dark:border-neutral-400 dark:checked:border-primary"
                         type="radio"
@@ -172,13 +185,16 @@ const Form = () => {
                   >
                     <Image
                       alt="a"
-                      src="/image.jpg"
+                      src="/urbain.jpg"
                       width={1000}
                       height={1000}
                       className="shadow rounded-lg overflow-hidden border"
                     />
 
-                    <div className="mt-5 flex justify-center">
+                    <div className="mt-5 flex flex-col items-center justify-center">
+                      <h2 className="text-3xl pb-3 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+                        Espace urbain
+                      </h2>
                       <input
                         className="relative float-left  h-6 w-6 appearance-none rounded-full border-2 border-solid border-secondary-500 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-slate-50 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-black/60 focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-checkbox checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] rtl:float-right dark:border-neutral-400 dark:checked:border-primary"
                         type="radio"

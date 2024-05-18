@@ -1,6 +1,6 @@
 import AnimatedTimer from "@/components/Animatedtimer";
 import Footer from "@/components/Footer";
-import Form from "@/components/Form";
+import Formulaire from "@/components/Formcount";
 import Header from "@/components/Header";
 import Head from "next/head";
 
@@ -15,9 +15,8 @@ export default function Home() {
       </Head>
       <main>
         <Header />
-        <AnimatedTimer/>
-        <Form />
-
+        <AnimatedTimer />
+        <Formulaire />
         <Footer />
       </main>
     </>
