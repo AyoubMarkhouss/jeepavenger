@@ -256,7 +256,7 @@ const Form = () => {
 
             <div className="flex flex-col justify-center items-center py-16">
               <h1 className="font-bold pb-4 md:max-w-2xl text-xl md:text-4xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
-                Tentez de gagner un voyage dans votre destination de
+                Tentez de gagner un voyage vers votre destination de
                 prédilection en Avenger E-Hybrid.
               </h1>
             </div>
