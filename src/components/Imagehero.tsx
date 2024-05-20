@@ -39,11 +39,11 @@ export function Imagehero() {
           itinéraire devient une aventure à découvrir, chaque destination un
           nouveau monde à explorer. It&apos;s time to make you choice !
         </motion.p>
-        <div className="px-4 py-4 backdrop-blur-sm border bg-yellow-500/10 border-yellow-500/20 text-white mx-auto text-center rounded-full relative mt-4">
+        {/* <div className="px-4 py-4 backdrop-blur-sm border bg-yellow-500/10 border-yellow-500/20 text-white mx-auto text-center rounded-full relative mt-4">
           <span>
             <FaArrowDownLong />
           </span>
-        </div>
+        </div> */}
       </motion.div>
     </ImagesSlider>
   );

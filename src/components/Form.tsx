@@ -4,6 +4,11 @@ import React, { FormEvent } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useState } from "react";
+import {
+  Link as ScrollLink,
+  animateScroll as scroll,
+  scroller,
+} from "react-scroll";
 
 const Form = () => {
   const router = useRouter();
@@ -56,61 +61,77 @@ const Form = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center bg-black">
               <div className="flex justify-center">
                 <div className="p-5 max-w-lg   hover:bg-slate-50/5 hover:rounded-xl  flex flex-col items-center">
-                  <div
-                    className="mt-3"
-                    onClick={() => handleCardClick("option1")}
+                  <ScrollLink
+                    to="formulaire"
+                    spy={true}
+                    smooth={true}
+                    duration={1500}
+                    offset={-80}
                   >
-                    <Image
-                      alt="a"
-                      src="/desert.jpg"
-                      width={1000}
-                      height={1000}
-                      className="shadow rounded-lg overflow-hidden border"
-                    />
-
-                    <div className="mt-5 flex flex-col items-center justify-center">
-                      <h2 className="text-3xl pb-3 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
-                        Desert
-                      </h2>
-                      <input
-                        className="relative float-left  h-6 w-6 appearance-none rounded-full border-2 border-solid border-secondary-500 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-slate-50 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-black/60 focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-checkbox checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] rtl:float-right dark:border-neutral-400 dark:checked:border-primary"
-                        type="radio"
-                        name="Endroit"
-                        id={`Endroitoption1`}
-                        value="Desert"
+                    <div
+                      className="mt-3"
+                      onClick={() => handleCardClick("option1")}
+                    >
+                      <Image
+                        alt="a"
+                        src="/desert.jpg"
+                        width={1000}
+                        height={1000}
+                        className="shadow rounded-lg overflow-hidden border"
                       />
+
+                      <div className="mt-5 flex flex-col items-center justify-center">
+                        <h2 className="text-3xl pb-3 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+                          Desert
+                        </h2>
+                        <input
+                          className="relative float-left  h-6 w-6 appearance-none rounded-full border-2 border-solid border-secondary-500 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-slate-50 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-black/60 focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-checkbox checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] rtl:float-right dark:border-neutral-400 dark:checked:border-primary"
+                          type="radio"
+                          name="Endroit"
+                          id={`Endroitoption1`}
+                          value="Desert"
+                        />
+                      </div>
                     </div>
-                  </div>
+                  </ScrollLink>
                 </div>
               </div>
 
               <div className="flex justify-center">
                 <div className="p-5 max-w-lg   hover:bg-slate-50/5 hover:rounded-xl  flex flex-col items-center ">
-                  <div
-                    className="mt-3"
-                    onClick={() => handleCardClick("option2")}
+                  <ScrollLink
+                    to="formulaire"
+                    spy={true}
+                    smooth={true}
+                    duration={1500}
+                    offset={-80}
                   >
-                    <Image
-                      alt="a"
-                      src="/mer.jpg"
-                      width={1000}
-                      height={1000}
-                      className="shadow rounded-lg overflow-hidden border"
-                    />
-
-                    <div className="mt-5 flex flex-col items-center justify-center">
-                      <h2 className="text-3xl pb-3 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
-                        Mer
-                      </h2>
-                      <input
-                        className="relative float-left  h-6 w-6 appearance-none rounded-full border-2 border-solid border-secondary-500 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-slate-50 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-black/60 focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-checkbox checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] rtl:float-right dark:border-neutral-400 dark:checked:border-primary"
-                        type="radio"
-                        name="Endroit"
-                        id={`Endroitoption2`}
-                        value="Mer"
+                    <div
+                      className="mt-3"
+                      onClick={() => handleCardClick("option2")}
+                    >
+                      <Image
+                        alt="a"
+                        src="/mer.jpg"
+                        width={1000}
+                        height={1000}
+                        className="shadow rounded-lg overflow-hidden border"
                       />
+
+                      <div className="mt-5 flex flex-col items-center justify-center">
+                        <h2 className="text-3xl pb-3 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+                          Mer
+                        </h2>
+                        <input
+                          className="relative float-left  h-6 w-6 appearance-none rounded-full border-2 border-solid border-secondary-500 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-slate-50 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-black/60 focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-checkbox checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] rtl:float-right dark:border-neutral-400 dark:checked:border-primary"
+                          type="radio"
+                          name="Endroit"
+                          id={`Endroitoption2`}
+                          value="Mer"
+                        />
+                      </div>
                     </div>
-                  </div>
+                  </ScrollLink>
                 </div>
               </div>
             </div>
@@ -118,61 +139,77 @@ const Form = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center bg-black">
               <div className="flex justify-center">
                 <div className="p-5 max-w-lg  hover:bg-slate-50/5 hover:rounded-xl  flex flex-col items-center">
-                  <div
-                    className="mt-3 "
-                    onClick={() => handleCardClick("option3")}
+                  <ScrollLink
+                    to="formulaire"
+                    spy={true}
+                    smooth={true}
+                    duration={1500}
+                    offset={-80}
                   >
-                    <Image
-                      alt="a"
-                      src="/foret.jpg"
-                      width={1000}
-                      height={1000}
-                      className="shadow rounded-lg overflow-hidden border"
-                    />
-
-                    <div className="mt-5 flex flex-col items-center justify-center">
-                      <h2 className="text-3xl pb-3 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
-                        Forêt
-                      </h2>
-                      <input
-                        className="relative float-left  h-6 w-6 appearance-none rounded-full border-2 border-solid border-secondary-500 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-slate-50 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-black/60 focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-checkbox checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] rtl:float-right dark:border-neutral-400 dark:checked:border-primary"
-                        type="radio"
-                        name="Endroit"
-                        id={`Endroitoption3`}
-                        value="Forêt"
+                    <div
+                      className="mt-3 "
+                      onClick={() => handleCardClick("option3")}
+                    >
+                      <Image
+                        alt="a"
+                        src="/foret.jpg"
+                        width={1000}
+                        height={1000}
+                        className="shadow rounded-lg overflow-hidden border"
                       />
+
+                      <div className="mt-5 flex flex-col items-center justify-center">
+                        <h2 className="text-3xl pb-3 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+                          Forêt
+                        </h2>
+                        <input
+                          className="relative float-left  h-6 w-6 appearance-none rounded-full border-2 border-solid border-secondary-500 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-slate-50 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-black/60 focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-checkbox checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] rtl:float-right dark:border-neutral-400 dark:checked:border-primary"
+                          type="radio"
+                          name="Endroit"
+                          id={`Endroitoption3`}
+                          value="Forêt"
+                        />
+                      </div>
                     </div>
-                  </div>
+                  </ScrollLink>
                 </div>
               </div>
 
               <div className="flex justify-center">
                 <div className="p-5 max-w-lg  hover:bg-slate-50/5 hover:rounded-xl  flex flex-col items-center ">
-                  <div
-                    className="mt-3"
-                    onClick={() => handleCardClick("option4")}
+                  <ScrollLink
+                    to="formulaire"
+                    spy={true}
+                    smooth={true}
+                    duration={1500}
+                    offset={-80}
                   >
-                    <Image
-                      alt="a"
-                      src="/montagnes.jpg"
-                      width={1000}
-                      height={1000}
-                      className="shadow rounded-lg overflow-hidden border"
-                    />
-
-                    <div className="mt-5 flex flex-col items-center justify-center">
-                      <h2 className="text-3xl pb-3 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
-                        Montagnes
-                      </h2>
-                      <input
-                        className="relative float-left  h-6 w-6 appearance-none rounded-full border-2 border-solid border-secondary-500 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-slate-50 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-black/60 focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-checkbox checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] rtl:float-right dark:border-neutral-400 dark:checked:border-primary"
-                        type="radio"
-                        name="Endroit"
-                        id={`Endroitoption4`}
-                        value=" Montagnes"
+                    <div
+                      className="mt-3"
+                      onClick={() => handleCardClick("option4")}
+                    >
+                      <Image
+                        alt="a"
+                        src="/montagnes.jpg"
+                        width={1000}
+                        height={1000}
+                        className="shadow rounded-lg overflow-hidden border"
                       />
+
+                      <div className="mt-5 flex flex-col items-center justify-center">
+                        <h2 className="text-3xl pb-3 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+                          Montagne
+                        </h2>
+                        <input
+                          className="relative float-left  h-6 w-6 appearance-none rounded-full border-2 border-solid border-secondary-500 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-slate-50 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-black/60 focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-checkbox checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] rtl:float-right dark:border-neutral-400 dark:checked:border-primary"
+                          type="radio"
+                          name="Endroit"
+                          id={`Endroitoption4`}
+                          value=" Montagnes"
+                        />
+                      </div>
                     </div>
-                  </div>
+                  </ScrollLink>
                 </div>
               </div>
             </div>
@@ -180,36 +217,51 @@ const Form = () => {
             <div className="flex items-center justify-center bg-black">
               <div className="flex justify-center">
                 <div className="p-5 max-w-md lg:max-w-lg  hover:bg-slate-50/5 hover:rounded-xl  flex flex-col items-center">
-                  <div
-                    className="mt-3"
-                    onClick={() => handleCardClick("option5")}
+                  <ScrollLink
+                    to="formulaire"
+                    spy={true}
+                    smooth={true}
+                    duration={1500}
+                    offset={-80}
                   >
-                    <Image
-                      alt="a"
-                      src="/urbain.jpg"
-                      width={1000}
-                      height={1000}
-                      className="shadow rounded-lg overflow-hidden border"
-                    />
-
-                    <div className="mt-5 flex flex-col items-center justify-center">
-                      <h2 className="text-3xl pb-3 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
-                        Espace urbain
-                      </h2>
-                      <input
-                        className="relative float-left  h-6 w-6 appearance-none rounded-full border-2 border-solid border-secondary-500 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-slate-50 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-black/60 focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-checkbox checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] rtl:float-right dark:border-neutral-400 dark:checked:border-primary"
-                        type="radio"
-                        name="Endroit"
-                        id={`Endroitoption5`}
-                        value="Espace_urbain"
+                    <div
+                      className="mt-3"
+                      onClick={() => handleCardClick("option5")}
+                    >
+                      <Image
+                        alt="a"
+                        src="/urbain.jpg"
+                        width={1000}
+                        height={1000}
+                        className="shadow rounded-lg overflow-hidden border"
                       />
+
+                      <div className="mt-5 flex flex-col items-center justify-center">
+                        <h2 className="text-3xl pb-3 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+                          Urbain
+                        </h2>
+                        <input
+                          className="relative float-left  h-6 w-6 appearance-none rounded-full border-2 border-solid border-secondary-500 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-slate-50 checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-black/60 focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-checkbox checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] rtl:float-right dark:border-neutral-400 dark:checked:border-primary"
+                          type="radio"
+                          name="Endroit"
+                          id={`Endroitoption5`}
+                          value="Urbain"
+                        />
+                      </div>
                     </div>
-                  </div>
+                  </ScrollLink>
                 </div>
               </div>
             </div>
 
-            <div className="lg:px-80">
+            <div className="flex flex-col justify-center items-center py-16">
+              <h1 className="font-bold pb-4 md:max-w-2xl text-xl md:text-4xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+                Tentez de gagner un voyage dans votre destination de
+                prédilection en Avenger E-Hybrid.
+              </h1>
+            </div>
+
+            <div className="lg:px-80" id="formulaire">
               <div className="">
                 <label className="block text-lg mb-1 ml-1">Nom :</label>
                 <input
