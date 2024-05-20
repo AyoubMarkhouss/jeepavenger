@@ -8,9 +8,9 @@ export default function Home() {
   return (
     <>
       <Head>
-        <meta name="description" content="Jeep Avenger - Formulaire" />
+        <meta name="description" content="Jeep Avenger - Inscription" />
         <link rel="icon" href="/logo-jeep-black.png" />
-        <title>Jeep Avenger</title>
+        <title>Jeep Avenger - Inscription</title>
         <meta property="og:image" content="/logo-jeep-black.png" />
       </Head>
       <main>

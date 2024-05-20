@@ -15,10 +15,11 @@ const Formulaire = () => {
       const formData = new FormData(event.currentTarget);
       console.log(event.currentTarget);
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbzPAmLvT8nezUUHmI30OS0ffDE0I8EmnOEFFGnGro4nVm3KmS4pAZndujxOJN-mkY47/exec",
+        "https://script.google.com/macros/s/AKfycbxFnpn3CRUD1_NUjk-T02w_tDj9jNLGBcCEa4sItLD53EgvQoRQFYS4saE3LwHRCZXu/exec",
         {
           method: "POST",
           body: formData,
+          cache: "no-cache",
         }
       );
 
@@ -29,9 +30,9 @@ const Formulaire = () => {
       console.error(error);
     } finally {
       toast.success("Envoyé avec succès !");
-      // setTimeout(() => {
-      //   router.refresh();
-      // }, 3000);
+      setTimeout(() => {
+        router.refresh();
+      }, 3000);
     }
   }
 
@@ -96,16 +97,24 @@ const Formulaire = () => {
                   Compte à rebours :
                 </label>
                 <input
-                  name="CAR"
-                  id="CAR"
+                  name="Compte_a_rebours"
+                  id="Compte_a_rebours"
                   type="text"
                   placeholder=""
                   className="block w-full  p-1 py-2 mb-3 text-slate-50 rounded focus:outline-none  focus:ring-1 backdrop-blur-sm  bg-gray-400/10 border border-slate-100/20"
                 />
+                <input
+                  name="Type"
+                  id="Type"
+                  type="text"
+                  value="car"
+                  placeholder=""
+                  className="hidden w-full p-1 py-2 mb-3 text-slate-50 rounded focus:outline-none  focus:ring-1 backdrop-blur-sm  bg-gray-400/10 border border-slate-100/20"
+                />
               </div>
               <div>
                 <button
-                  name="Namee"
+                  name="button"
                   type="submit"
                   className="w-full px-4 py-4 mt-10 hover:text-black font-bold rounded shadow focus:outline-none  backdrop-blur-sm  bg-yellow-500/80 border border-slate-100/20 hover:bg-amber-500/60 text-gray-50 "
                 >

@@ -15,10 +15,11 @@ const Form = () => {
       const formData = new FormData(event.currentTarget);
       console.log(event.currentTarget);
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbz0puOgxIILLpsGqR-91q3kfJL_Usq97XQ0fK_4kjnmFyd807FgPZJFV-AB-0Bu2u0c/exec",
+        "https://script.google.com/macros/s/AKfycbxFnpn3CRUD1_NUjk-T02w_tDj9jNLGBcCEa4sItLD53EgvQoRQFYS4saE3LwHRCZXu/exec",
         {
           method: "POST",
           body: formData,
+          cache: "no-cache",
         }
       );
 
@@ -29,9 +30,9 @@ const Form = () => {
       console.error(error);
     } finally {
       toast.success("Envoyé avec succès !");
-      // setTimeout(() => {
-      //   router.refresh();
-      // }, 3000);
+      setTimeout(() => {
+        router.refresh();
+      }, 3000);
     }
   }
 
@@ -138,7 +139,7 @@ const Form = () => {
                         type="radio"
                         name="Endroit"
                         id={`Endroitoption3`}
-                        value="radioDefault01"
+                        value="Forêt"
                       />
                     </div>
                   </div>
@@ -168,7 +169,7 @@ const Form = () => {
                         type="radio"
                         name="Endroit"
                         id={`Endroitoption4`}
-                        value="radioDefault01"
+                        value=" Montagnes"
                       />
                     </div>
                   </div>
@@ -200,7 +201,7 @@ const Form = () => {
                         type="radio"
                         name="Endroit"
                         id={`Endroitoption5`}
-                        value="radioDefault02"
+                        value="Espace_urbain"
                       />
                     </div>
                   </div>
@@ -259,10 +260,17 @@ const Form = () => {
                   className="block w-full  p-1 py-2 mb-3 text-slate-50 rounded focus:outline-none  focus:ring-1 backdrop-blur-sm  bg-gray-400/10 border border-slate-100/20"
                 />
               </div>
-
+              <input
+                name="Type"
+                id="Type"
+                type="text"
+                value="endroit"
+                placeholder=""
+                className="hidden w-full  p-1 py-2 mb-3 text-slate-50 rounded focus:outline-none  focus:ring-1 backdrop-blur-sm  bg-gray-400/10 border border-slate-100/20"
+              />
               <div>
                 <button
-                  name="Name"
+                  name="button"
                   type="submit"
                   className="w-full px-4 py-4 mt-10 hover:text-black font-bold rounded shadow focus:outline-none  backdrop-blur-sm  bg-yellow-500/80 border border-slate-100/20 hover:bg-amber-500/60 text-gray-50 "
                 >
