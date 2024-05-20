@@ -15,7 +15,7 @@ const Formulaire = () => {
       const formData = new FormData(event.currentTarget);
       console.log(event.currentTarget);
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbxFnpn3CRUD1_NUjk-T02w_tDj9jNLGBcCEa4sItLD53EgvQoRQFYS4saE3LwHRCZXu/exec",
+        "https://script.google.com/macros/s/AKfycbzi7hIcipwyC_9PthbCcAItC9yQsJo0aOu1GHSYluSB8PI-mmlDX0l3dl0QANWd5QI0/exec",
         {
           method: "POST",
           body: formData,
@@ -92,7 +92,7 @@ const Formulaire = () => {
                   className="block w-full  p-1 py-2 mb-3 text-slate-50 rounded focus:outline-none  focus:ring-1 backdrop-blur-sm  bg-gray-400/10 border border-slate-100/20"
                 />
               </div>
-              <div>
+              {/* <div>
                 <label className="block text-lg mb-1 ml-1">
                   Compte à rebours :
                 </label>
@@ -111,7 +111,7 @@ const Formulaire = () => {
                   placeholder=""
                   className="hidden w-full p-1 py-2 mb-3 text-slate-50 rounded focus:outline-none  focus:ring-1 backdrop-blur-sm  bg-gray-400/10 border border-slate-100/20"
                 />
-              </div>
+              </div> */}
               <div>
                 <button
                   name="button"

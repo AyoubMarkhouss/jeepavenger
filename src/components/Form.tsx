@@ -15,7 +15,7 @@ const Form = () => {
       const formData = new FormData(event.currentTarget);
       console.log(event.currentTarget);
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbxFnpn3CRUD1_NUjk-T02w_tDj9jNLGBcCEa4sItLD53EgvQoRQFYS4saE3LwHRCZXu/exec",
+        "https://script.google.com/macros/s/AKfycbzi7hIcipwyC_9PthbCcAItC9yQsJo0aOu1GHSYluSB8PI-mmlDX0l3dl0QANWd5QI0/exec",
         {
           method: "POST",
           body: formData,
