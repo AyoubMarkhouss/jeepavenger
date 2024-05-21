@@ -20,7 +20,7 @@ const Form = () => {
       const formData = new FormData(event.currentTarget);
       console.log(event.currentTarget);
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbzi7hIcipwyC_9PthbCcAItC9yQsJo0aOu1GHSYluSB8PI-mmlDX0l3dl0QANWd5QI0/exec",
+        "https://script.google.com/macros/s/AKfycbyieQDJybBwLk4EkGnXsR9Mj57sFL_sJwxfiMkeffUaguIHVKD2ehuYeG7qYm-Rs_IR/exec",
         {
           method: "POST",
           body: formData,
@@ -312,14 +312,7 @@ const Form = () => {
                   className="block w-full  p-1 py-2 mb-3 text-slate-50 rounded focus:outline-none  focus:ring-1 backdrop-blur-sm  bg-gray-400/10 border border-slate-100/20"
                 />
               </div>
-              <input
-                name="Type"
-                id="Type"
-                type="text"
-                value="endroit"
-                placeholder=""
-                className="hidden w-full  p-1 py-2 mb-3 text-slate-50 rounded focus:outline-none  focus:ring-1 backdrop-blur-sm  bg-gray-400/10 border border-slate-100/20"
-              />
+
               <div>
                 <button
                   name="button"
