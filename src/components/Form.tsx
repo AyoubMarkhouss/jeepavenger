@@ -66,7 +66,7 @@ const Form = () => {
                     spy={true}
                     smooth={true}
                     duration={1500}
-                    offset={-80}
+                    offset={-220}
                   >
                     <div
                       className="mt-3"
@@ -104,7 +104,7 @@ const Form = () => {
                     spy={true}
                     smooth={true}
                     duration={1500}
-                    offset={-80}
+                    offset={-220}
                   >
                     <div
                       className="mt-3"
@@ -144,7 +144,7 @@ const Form = () => {
                     spy={true}
                     smooth={true}
                     duration={1500}
-                    offset={-80}
+                    offset={-220}
                   >
                     <div
                       className="mt-3 "
@@ -182,7 +182,7 @@ const Form = () => {
                     spy={true}
                     smooth={true}
                     duration={1500}
-                    offset={-80}
+                    offset={-220}
                   >
                     <div
                       className="mt-3"
@@ -222,7 +222,7 @@ const Form = () => {
                     spy={true}
                     smooth={true}
                     duration={1500}
-                    offset={-80}
+                    offset={-220}
                   >
                     <div
                       className="mt-3"
